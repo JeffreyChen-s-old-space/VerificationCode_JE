@@ -2,6 +2,10 @@ package com.je_chen.Main;
 
 import com.je_chen.Module.Generate_VerificationCode;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class Generate_Test {
@@ -36,6 +40,21 @@ public class Generate_Test {
 
         String AlphaCode = CodeBuilder.toString();
         System.out.println(AlphaCode);
-        Code.Generate_Image(75,200,5,AlphaCode,40);
+        BufferedImage BFImage = Code.Generate_Image(75,200,5,AlphaCode,40,"CodeImage.png",true);
+
+        System.out.println();
+        System.out.println(BFImage == null);
+
+        System.out.println();
+        String Base64String = Code.Image_To_Base64String(BFImage,"png");
+        System.out.println(Base64String);
+
+        System.out.println();
+        BufferedImage Base64Image = Code.Base64String_To_Image(Base64String);
+        try {
+            ImageIO.write(Base64Image,"png",new File("Base64 TO Image.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
