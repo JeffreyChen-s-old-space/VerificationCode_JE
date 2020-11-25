@@ -1,4 +1,4 @@
-package com.je_chen.Main;
+package Main;
 
 import com.je_chen.Module.Generate_VerificationCode;
 
