@@ -3,11 +3,18 @@ version: 2.1
 orbs:
   maven: circleci/maven@1.0.3
 
-workflows:
-  maven_test:
-    jobs:
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    steps:
+      - checkout
       - run:
           name: Install Font
           command: apt-get install -y libfontconfig1
+
+workflows:
+  maven_test:
+    jobs:
       - maven/test:
           test_results_path: /test/java/Module
