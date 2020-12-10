@@ -1,10 +1,11 @@
+package Module;
+
 import org.junit.jupiter.api.Test;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import Module.Generate_VerificationCode;
 
 class Generate_VerificationCodeTest {
 
