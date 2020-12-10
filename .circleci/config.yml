@@ -6,5 +6,6 @@ orbs:
 workflows:
   maven_test:
     jobs:
+      - run : apt-get install -y libfontconfig1-dev
       - maven/test:
           test_results_path: /test/java/Module
