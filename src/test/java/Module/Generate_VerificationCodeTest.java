@@ -38,7 +38,6 @@ class Generate_VerificationCodeTest {
         String AlphaCode = CodeBuilder.toString();
         System.out.println(AlphaCode);
         BufferedImage BFImage = Code.Generate_Image(75, 200, 5, AlphaCode, 40, "CodeImage.png", true);
-
         System.out.println();
     }
 
