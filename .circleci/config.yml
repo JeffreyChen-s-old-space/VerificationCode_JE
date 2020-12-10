@@ -11,6 +11,6 @@ jobs:
       - checkout
       - run:
           name: Install Font
-          command: apt-get install --user libfontconfig1
+          command: sudo apt-get install libfontconfig1
       - run:
           mvn test
