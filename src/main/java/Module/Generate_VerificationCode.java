@@ -78,7 +78,7 @@ public class Generate_VerificationCode {
             Painter.drawLine(ThreadLocalRandom.current().nextInt(Width), 0, ThreadLocalRandom.current().nextInt(Width), Height);
 
         Painter.setColor(FontColor);
-        Painter.setFont(new Font("TimesRoman", Font.BOLD, FontSize));
+        Painter.setFont(new Font(null, Font.BOLD, FontSize));
         Painter.drawString(DrawString, FontSize, (Height + (FontSize / 2)) / 2);
 
         Painter.setColor(LineColor);
