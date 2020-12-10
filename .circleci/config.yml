@@ -6,7 +6,6 @@ orbs:
 workflows:
   maven_test:
     jobs:
-      - checkout
       - run:
           name: Install Font
           command: apt-get install -y libfontconfig1
