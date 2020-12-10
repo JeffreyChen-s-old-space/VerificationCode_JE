@@ -3,6 +3,12 @@ version: 2.1
 orbs:
   maven: circleci/maven@1.0.3
 
+jobs:
+  test:
+    steps:
+      - checkout
+      - run: apt-get install -y libfontconfig1
+          
 workflows:
   maven_test:
     jobs:
